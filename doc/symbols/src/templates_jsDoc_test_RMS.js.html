@@ -1,0 +1,51 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">/** 
+<span class='line'>  2</span> * @fileOverview PhoneEx-Simple 
+<span class='line'>  3</span> * @author &lt;a href="http://www.phoneex.cn">锋易软件&lt;/a> 
+<span class='line'>  4</span> * @version 1.0 
+<span class='line'>  5</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'>  6</span> </span><span class="COMM">/** 
+<span class='line'>  7</span> * @author phoneex
+<span class='line'>  8</span> * @name RMS
+<span class='line'>  9</span> * @class 记录管理系统 
+<span class='line'> 10</span> * @since version 1.0
+<span class='line'> 11</span> */</span><span class="WHIT">
+<span class='line'> 12</span> </span><span class="COMM">/** 
+<span class='line'> 13</span> * @description 将value保存到对应的key中，key是唯一的，如果已存在会覆盖 
+<span class='line'> 14</span> * @param {String} key 键
+<span class='line'> 15</span> * @param {String} value 值
+<span class='line'> 16</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值,true / false
+<span class='line'> 17</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 18</span> </span><span class="NAME">RMS.save</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">key</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">value</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 19</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 20</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">key</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 21</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">1</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">value</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 22</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">2</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 23</span> </span><span class="WHIT">    </span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"RMS"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"save"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 24</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 25</span> </span><span class="COMM">/** 
+<span class='line'> 26</span> * @description 读取指定key的值 
+<span class='line'> 27</span> * @param {String} key 键
+<span class='line'> 28</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值,abcdefg
+<span class='line'> 29</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 30</span> </span><span class="NAME">RMS.load</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">key</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 31</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 32</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">key</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 33</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">1</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 34</span> </span><span class="WHIT">    </span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"RMS"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"load"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 35</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 36</span> </span><span class="COMM">/** 
+<span class='line'> 37</span> * @description 删除指定key的值
+<span class='line'> 38</span> * @param {String} key 键
+<span class='line'> 39</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 40</span> </span><span class="NAME">RMS.remove</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">key</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 41</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 42</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">key</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 43</span> </span><span class="WHIT">    </span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"RMS"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"remove"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 44</span> </span><span class="PUNC">}</span></pre></body></html>

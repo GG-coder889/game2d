@@ -1,0 +1,127 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">/** 
+<span class='line'>  2</span> * @fileOverview PhoneEx-Simple 
+<span class='line'>  3</span> * @author &lt;a href="http://www.phoneex.cn">锋易软件&lt;/a> 
+<span class='line'>  4</span> * @version 1.0 
+<span class='line'>  5</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'>  6</span> </span><span class="COMM">/** 
+<span class='line'>  7</span> * @author phoneex
+<span class='line'>  8</span> * @name Tools
+<span class='line'>  9</span> * @class 工具 
+<span class='line'> 10</span> * @since version 1.0
+<span class='line'> 11</span> */</span><span class="WHIT">
+<span class='line'> 12</span> </span><span class="COMM">/** 
+<span class='line'> 13</span> * @description 获取图片的Base64值,图片格式为jpg 
+<span class='line'> 14</span> * @param {String} data 图片的byte[]
+<span class='line'> 15</span> * @param {String} quality 图片显示质量 1 - 100
+<span class='line'> 16</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值,abcdefg
+<span class='line'> 17</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 18</span> </span><span class="NAME">Tools.getPicBase64Byte</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">data</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">quality</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 19</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 20</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">data</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 21</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">1</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">quality</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 22</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">2</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 23</span> </span><span class="WHIT">    </span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"getPicBase64Byte"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 24</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 25</span> </span><span class="COMM">/** 
+<span class='line'> 26</span> * @description 对字符串MD5加密 
+<span class='line'> 27</span> * @param {String} str 要加密的字符串
+<span class='line'> 28</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值,abcdefg
+<span class='line'> 29</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 30</span> </span><span class="NAME">Tools.MD5</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">str</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 31</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 32</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">str</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 33</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">1</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 34</span> </span><span class="WHIT">    </span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"MD5"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 35</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 36</span> </span><span class="COMM">/** 
+<span class='line'> 37</span> * @description 打开条码扫描
+<span class='line'> 38</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值,abcdefg
+<span class='line'> 39</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 40</span> </span><span class="NAME">Tools.openScanner</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 41</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 42</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 43</span> </span><span class="WHIT">    </span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"openScanner"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 44</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 45</span> </span><span class="COMM">/** 
+<span class='line'> 46</span> * @description 调用手机本身的beep声音 
+<span class='line'> 47</span> * @param {String} pattern 时长(毫秒)
+<span class='line'> 48</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 49</span> </span><span class="NAME">Tools.beep</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">pattern</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 50</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 51</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">pattern</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 52</span> </span><span class="WHIT">    </span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"beep"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 53</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 54</span> </span><span class="COMM">/** 
+<span class='line'> 55</span> * @description 调用手机本身的震动 
+<span class='line'> 56</span> * @param {String} pattern 时长(毫秒)
+<span class='line'> 57</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 58</span> </span><span class="NAME">Tools.vibrate</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">pattern</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 59</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 60</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">pattern</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 61</span> </span><span class="WHIT">    </span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"vibrate"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 62</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 63</span> </span><span class="COMM">/** 
+<span class='line'> 64</span> * @description 获取手机时间 
+<span class='line'> 65</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值,{"year":""2011","month":"4","day":"1","hour":"7","minute":"20","second":30"}
+<span class='line'> 66</span> */</span><span class="WHIT">
+<span class='line'> 67</span> </span><span class="NAME">Tools.getTime</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 68</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 69</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 70</span> </span><span class="WHIT">    </span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"getTime"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 71</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 72</span> </span><span class="COMM">/** 
+<span class='line'> 73</span> * @description 获取手机的IP地址 
+<span class='line'> 74</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值,192.168.0.19
+<span class='line'> 75</span> */</span><span class="WHIT">
+<span class='line'> 76</span> </span><span class="NAME">Tools.getIp</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 77</span> </span><span class="WHIT">	</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 78</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 79</span> </span><span class="WHIT">	</span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"getIp"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 80</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 81</span> </span><span class="COMM">/** 
+<span class='line'> 82</span> * @description 检查手机网络 
+<span class='line'> 83</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值,true / false
+<span class='line'> 84</span> */</span><span class="WHIT">
+<span class='line'> 85</span> </span><span class="NAME">Tools.checkNetwork</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 86</span> </span><span class="WHIT">    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 87</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 88</span> </span><span class="WHIT">	</span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"checkNetwork"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 89</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 90</span> </span><span class="COMM">/** 
+<span class='line'> 91</span> * @description base64编码 
+<span class='line'> 92</span> * @param {String} data 要编码的字符串
+<span class='line'> 93</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值,abcdddd
+<span class='line'> 94</span> */</span><span class="WHIT">
+<span class='line'> 95</span> </span><span class="NAME">Tools.base64encode</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">data</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 96</span> </span><span class="WHIT">	</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 97</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">data</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 98</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">1</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 99</span> </span><span class="WHIT">	</span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"base64encode"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>100</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>101</span> </span><span class="COMM">/** 
+<span class='line'>102</span> * @description base64解码 
+<span class='line'>103</span> * @param {String} data 要解码的字符串
+<span class='line'>104</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值,abcdddd
+<span class='line'>105</span> */</span><span class="WHIT">
+<span class='line'>106</span> </span><span class="NAME">Tools.base64decode</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">data</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>107</span> </span><span class="WHIT">	</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>108</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">data</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>109</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">1</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>110</span> </span><span class="WHIT">	</span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"base64decode"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>111</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>112</span> </span><span class="COMM">/** 
+<span class='line'>113</span> * @description 打开系统自带浏览器 
+<span class='line'>114</span> * @param {String} url 要访问的网址
+<span class='line'>115</span> */</span><span class="WHIT">
+<span class='line'>116</span> </span><span class="NAME">Tools.openSystemBrowser</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">url</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>117</span> </span><span class="WHIT">	</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>118</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">url</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>119</span> </span><span class="WHIT">	</span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Tools"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"openSystemBrowser"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>120</span> </span><span class="PUNC">}</span></pre></body></html>

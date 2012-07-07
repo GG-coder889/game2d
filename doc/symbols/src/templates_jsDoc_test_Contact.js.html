@@ -1,0 +1,42 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">/** 
+<span class='line'>  2</span> * @fileOverview PhoneEx-Simple 
+<span class='line'>  3</span> * @author &lt;a href="http://www.phoneex.cn">锋易软件&lt;/a> 
+<span class='line'>  4</span> * @version 1.0 
+<span class='line'>  5</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'>  6</span> </span><span class="COMM">/** 
+<span class='line'>  7</span> * @author phoneex
+<span class='line'>  8</span> * @name Contact
+<span class='line'>  9</span> * @class 通讯录 
+<span class='line'> 10</span> * @since version 1.0
+<span class='line'> 11</span> */</span><span class="WHIT">
+<span class='line'> 12</span> </span><span class="COMM">/** 
+<span class='line'> 13</span> * @description 根据页码和每页显示数获取通讯录基本信息列表
+<span class='line'> 14</span> * @param {String} page 页码
+<span class='line'> 15</span> * @param {String} count 每页显示数量
+<span class='line'> 16</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值:{id:{"id":"23", "name":"xss", "icon":"", "times":"", "lastTime":"", "hasPhoneNumber":"1"}， id:{"id":"24", "name":"xfss", "icon":"", "times":"", "lastTime":"", "hasPhoneNumber":"0"}} 
+<span class='line'> 17</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 18</span> </span><span class="NAME">Contact.getContacts</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">page</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">count</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 19</span> </span><span class="WHIT">	</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 20</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">page</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 21</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">1</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">count</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 22</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">2</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 23</span> </span><span class="WHIT">	</span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Contact"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"getContacts"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 24</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 25</span> </span><span class="COMM">/** 
+<span class='line'> 26</span> * @description 根据userId获取该用户的信息
+<span class='line'> 27</span> * @param {String} userId 用户ID
+<span class='line'> 28</span> * @param {Function} callbackFunction 页面注册的回调函数,返回示例值:{id:{"id":"23", "name":"xss", "icon":"", "times":"", "lastTime":"", "hasPhoneNumber":"1","email":"xxx@xx.com","im":"","note":"","address":"","organization":""}}
+<span class='line'> 29</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 30</span> </span><span class="NAME">Contact.getInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">userId</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 31</span> </span><span class="WHIT">	</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 32</span> </span><span class="WHIT">    </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">userId</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 33</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">1</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 34</span> </span><span class="WHIT">	</span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Contact"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"getInfo"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 35</span> </span><span class="PUNC">}</span></pre></body></html>

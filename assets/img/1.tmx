@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="13" height="13" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="terrain" tilewidth="32" tileheight="32">
+  <image source="terrain.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="3" name="enemy" tilewidth="32" tileheight="32">
+  <image source="enemy.png" width="128" height="2048"/>
+ </tileset>
+ <tileset firstgid="259" name="door" tilewidth="32" tileheight="32">
+  <image source="door.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="275" name="item" tilewidth="32" tileheight="32">
+  <image source="item.png" width="128" height="512"/>
+ </tileset>
+ <layer name="floor" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYBzFo3gQYwDjGACq
+  </data>
+ </layer>
+ <layer name="wall" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJydkEkKACAMA0P//2hPgoQsxUJRpGNGB8B8NJ61FTO8d3erHJW5ZdxZ4pub8lDV/pJnUg7PJ1+Xo5j0ni3jeOXWfG8f/8QAuw==
+  </data>
+ </layer>
+ <layer name="enemy" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAeiEGjBwrEYGEn0cm+JiCehWQnDOMDswjIw8BrEt2FDkgJA2xq8emfSUBdEwl2owMAuwcImQ==
+  </data>
+ </layer>
+ <layer name="door" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAOYGGkkkEDBFixuB+bn5gHgT8HgxtwAVq4DQAqmgAd
+  </data>
+ </layer>
+ <layer name="item" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAPyDJCaH8g7c6IXY0wUFyKEVMPISCMRZ04FjGQOhGouDWRehyAYvZQcVci3UMPoILHLapAOUmovAgWdRJQMWUS/COORY8PI/XCBGYuvjjXJ9IuADs+BGw=
+  </data>
+ </layer>
+ <objectgroup name="object" width="13" height="13">
+  <object type="teleport" x="32" y="352" width="32" height="32">
+   <properties>
+    <property name="heroTileCoordX" value="3"/>
+    <property name="heroTileCoordY" value="10"/>
+    <property name="image" value="down_floor.png"/>
+    <property name="targetMap" value="0"/>
+   </properties>
+  </object>
+  <object name="npc0" type="npc" x="224" y="288" width="32" height="32">
+   <properties>
+    <property name="image" value="npc.png"/>
+    <property name="rectX" value="0"/>
+    <property name="rectY" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

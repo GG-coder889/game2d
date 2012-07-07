@@ -1,0 +1,41 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">/** 
+<span class='line'>  2</span> * @fileOverview PhoneEx-Simple 
+<span class='line'>  3</span> * @author &lt;a href="http://www.phoneex.cn">锋易软件&lt;/a> 
+<span class='line'>  4</span> * @version 1.0 
+<span class='line'>  5</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'>  6</span> </span><span class="COMM">/** 
+<span class='line'>  7</span> * @author phoneex 
+<span class='line'>  8</span> * @constructor Sensor 
+<span class='line'>  9</span> * @description 传感器 
+<span class='line'> 10</span> * @since version 1.0
+<span class='line'> 11</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 12</span> </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">Sensor</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">PhoneExBase</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 13</span> </span><span class="COMM">/** 
+<span class='line'> 14</span> * @description 为当前页面注册一个传感器 
+<span class='line'> 15</span> * @param {int} type 传感器类型（传入的值是：1（加速度计传感器），2（磁力计传感器），3（方位传感器），4（陀螺仪传感器），5（光照传感器），6（压力传感器），7（温度传感器），8（距离传感器）） 
+<span class='line'> 16</span> * @param {function} callbackFunction 页面注册的回调函数，当传感器发生变化时调用该函数，返回相应传感器的参考值,返回值示例：{"x":"12312.123","y":"12312.123","z":"12312.123"}
+<span class='line'> 17</span> * @param {int} freq 采样间隔(毫秒)
+<span class='line'> 18</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 19</span> </span><span class="NAME">Sensor.start</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">type</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">freq</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 20</span> </span><span class="WHIT">	</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 21</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">type</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 22</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">1</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">callbackFunction</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 23</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">2</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">freq</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 24</span> </span><span class="WHIT">	</span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Sensor"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"start"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 25</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 26</span> </span><span class="COMM">/** 
+<span class='line'> 27</span> * @description 不使用的时候注销传感器
+<span class='line'> 28</span> * @param {int} type 传感器类型（传入的值是：1（加速度计传感器），2（磁力计传感器），3（方位传感器），4（陀螺仪传感器），5（光照传感器），6（压力传感器），7（温度传感器），8（距离传感器）） 
+<span class='line'> 29</span> */</span><span class="WHIT"> </span><span class="WHIT">
+<span class='line'> 30</span> </span><span class="NAME">Sensor.stop</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">type</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 31</span> </span><span class="WHIT">	</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Array</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 32</span> </span><span class="WHIT">	</span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">type</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 33</span> </span><span class="WHIT">	</span><span class="NAME">this.execute</span><span class="PUNC">(</span><span class="STRN">"Sensor"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"stop"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments.join</span><span class="PUNC">(</span><span class="STRN">"|&^"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 34</span> </span><span class="PUNC">}</span></pre></body></html>

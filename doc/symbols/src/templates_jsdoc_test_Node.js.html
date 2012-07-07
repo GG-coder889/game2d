@@ -1,0 +1,187 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">Node</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Class.create</span><span class="PUNC">(</span><span class="WHIT">
+<span class='line'>  2</span> </span><span class="WHIT">  </span><span class="COMM">/** @lends Node#*/</span><span class="WHIT">
+<span class='line'>  3</span> </span><span class="WHIT">  </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>  4</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>  5</span>      * @class 节点.
+<span class='line'>  6</span>      * @constructs
+<span class='line'>  7</span> 	 * @example  var n = new Node();
+<span class='line'>  8</span>      */</span><span class="WHIT">
+<span class='line'>  9</span> </span><span class="WHIT">    </span><span class="NAME">initialize</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 10</span> </span><span class="WHIT">      
+<span class='line'> 11</span>     </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 12</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 13</span> 	* 获取父对象
+<span class='line'> 14</span> 	* @return {Node} Node对象
+<span class='line'> 15</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 16</span> 	</span><span class="NAME">getParent</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 17</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 18</span> 	* @description 停止当前节点的所有动作
+<span class='line'> 19</span> 	* @function  
+<span class='line'> 20</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 21</span> 	</span><span class="NAME">stopAllActions</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 22</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 23</span> 	* @description 运行动作
+<span class='line'> 24</span> 	* @function 
+<span class='line'> 25</span> 	* @param {Action} action 动作对象 
+<span class='line'> 26</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 27</span> 	</span><span class="NAME">runAction</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">action</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 28</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 29</span> 	* @description 停止运行动作
+<span class='line'> 30</span> 	* @function 
+<span class='line'> 31</span> 	* @param {Action} action 动作对象 
+<span class='line'> 32</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 33</span> 	</span><span class="NAME">stopAction</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">action</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 34</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 35</span> 	* @description 设置节点锚点
+<span class='line'> 36</span> 	* @function 
+<span class='line'> 37</span> 	* @param {Number} x X坐标
+<span class='line'> 38</span> 	* @param {Number} y Y坐标
+<span class='line'> 39</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 40</span> 	</span><span class="NAME">setAnchorPoint</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">x</span><span class="PUNC">,</span><span class="NAME">y</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 41</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 42</span> 	* @description 设置节点旋转角度
+<span class='line'> 43</span> 	* @function 
+<span class='line'> 44</span> 	* @param {Number} rotation 旋转角度
+<span class='line'> 45</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 46</span> 	</span><span class="NAME">setRotation</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">rotation</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 47</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 48</span> 	* @description 设置节点位置
+<span class='line'> 49</span> 	* @function 
+<span class='line'> 50</span> 	* @param {Number} x X坐标
+<span class='line'> 51</span> 	* @param {Number} y Y坐标
+<span class='line'> 52</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 53</span> 	</span><span class="NAME">setPosition</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">x</span><span class="PUNC">,</span><span class="NAME">y</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 54</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 55</span> 	* @description 获取节点位置
+<span class='line'> 56</span> 	* @function 
+<span class='line'> 57</span> 	* @return {Point} Point对象
+<span class='line'> 58</span> 	*/</span><span class="WHIT">  
+<span class='line'> 59</span> 	</span><span class="NAME">getPosition</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 60</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 61</span> 	* @description 设置节点是否显示
+<span class='line'> 62</span> 	* @function 
+<span class='line'> 63</span> 	* @param {Boolean} isVisible 是否显示
+<span class='line'> 64</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 65</span> 	</span><span class="NAME">setIsVisible</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">isVisible</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 66</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 67</span> 	* @description 设置节点X坐标缩放值
+<span class='line'> 68</span> 	* @function 
+<span class='line'> 69</span> 	* @param {Number} scaleX 文件路径 
+<span class='line'> 70</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 71</span> 	</span><span class="NAME">setScaleX</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">scaleX</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 72</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 73</span> 	* @description 获取节点X坐标缩放值
+<span class='line'> 74</span> 	* @function 
+<span class='line'> 75</span> 	* @return {Number} X坐标缩放值 
+<span class='line'> 76</span> 	*/</span><span class="WHIT">  
+<span class='line'> 77</span> 	</span><span class="NAME">getScaleX</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 78</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 79</span> 	* @description 设置节点Y坐标缩放值
+<span class='line'> 80</span> 	* @function 
+<span class='line'> 81</span> 	* @param {Number} scaleY 文件路径 
+<span class='line'> 82</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 83</span> 	</span><span class="NAME">setScaleY</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">scaleY</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 84</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 85</span> 	* @description 获取节点Y坐标缩放值
+<span class='line'> 86</span> 	* @function 
+<span class='line'> 87</span> 	* @return {Number} Y坐标缩放值 
+<span class='line'> 88</span> 	*/</span><span class="WHIT">  
+<span class='line'> 89</span> 	</span><span class="NAME">getScaleY</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 90</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 91</span> 	* @description 获取节点显示大小
+<span class='line'> 92</span> 	* @function 
+<span class='line'> 93</span> 	* @return {Size} Size对象
+<span class='line'> 94</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 95</span> 	</span><span class="NAME">getContentSize</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 96</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 97</span> 	* @description 设置节点显示大小
+<span class='line'> 98</span> 	* @function 
+<span class='line'> 99</span> 	* @param {Number} width 宽度 
+<span class='line'>100</span> 	* @param {Number} height 高度 
+<span class='line'>101</span> 	*/</span><span class="WHIT"> 
+<span class='line'>102</span> 	</span><span class="NAME">setContentSize</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">width</span><span class="PUNC">,</span><span class="NAME">height</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>103</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>104</span> 	* @description 添加节点的子节点
+<span class='line'>105</span> 	* @function 
+<span class='line'>106</span> 	* @param {Node} node 子节点对象 
+<span class='line'>107</span> 	* @param {Number} [zOrder] Z次序 
+<span class='line'>108</span> 	* @param {Number} [tag] 标签 
+<span class='line'>109</span> 	*/</span><span class="WHIT"> 
+<span class='line'>110</span> 	</span><span class="NAME">addChild</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">node</span><span class="PUNC">,</span><span class="NAME">zOrder</span><span class="PUNC">,</span><span class="NAME">tag</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>111</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>112</span> 	* @description 根据标签删除子节点
+<span class='line'>113</span> 	* @function 
+<span class='line'>114</span> 	* @param {Number} tag 标签
+<span class='line'>115</span> 	* @param {Boolean} cleanUp 是否清除
+<span class='line'>116</span> 	*/</span><span class="WHIT"> 
+<span class='line'>117</span> 	</span><span class="NAME">removeChildByTag</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>118</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>119</span> 	* @description 删除节点的子节点
+<span class='line'>120</span> 	* @function 
+<span class='line'>121</span> 	* @param {Node} node 子节点对象 
+<span class='line'>122</span> 	* @param {Boolean} cleanUp 是否清除
+<span class='line'>123</span> 	*/</span><span class="WHIT"> 
+<span class='line'>124</span> 	</span><span class="NAME">removeChild</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">node</span><span class="PUNC">,</span><span class="NAME">cleanUp</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>125</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>126</span> 	* @description 根据标签获取子节点
+<span class='line'>127</span> 	* @function 
+<span class='line'>128</span> 	* @param {Number} tag 标签
+<span class='line'>129</span> 	* @return {Node} Node对象
+<span class='line'>130</span> 	*/</span><span class="WHIT"> 
+<span class='line'>131</span> 	</span><span class="NAME">getChildByTag</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>132</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>133</span> 	* @description 获取节点Z次序
+<span class='line'>134</span> 	* @function 
+<span class='line'>135</span> 	* @return {Number} zOrder Z次序
+<span class='line'>136</span> 	*/</span><span class="WHIT"> 
+<span class='line'>137</span> 	</span><span class="NAME">getZOrder</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>138</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>139</span> 	* @description 初始化精灵对象
+<span class='line'>140</span> 	* @function 
+<span class='line'>141</span> 	* @param {Boolean} cleanUp 是否清除
+<span class='line'>142</span> 	*/</span><span class="WHIT"> 
+<span class='line'>143</span> 	</span><span class="NAME">removeFromParentAndCleanup</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">cleanUp</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>144</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>145</span> 	* @description 设置节点标签
+<span class='line'>146</span> 	* @function 
+<span class='line'>147</span> 	* @param {Number} tag 标签 
+<span class='line'>148</span> 	*/</span><span class="WHIT"> 
+<span class='line'>149</span> 	</span><span class="NAME">setTag</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">tag</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>150</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>151</span> 	* @description 获取节点标签
+<span class='line'>152</span> 	* @function 
+<span class='line'>153</span> 	* @return {Number} tag 节点标签 
+<span class='line'>154</span> 	*/</span><span class="WHIT"> 
+<span class='line'>155</span> 	</span><span class="NAME">getTag</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>156</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>157</span> 	* @description 获取节点边框大小
+<span class='line'>158</span> 	* @function 
+<span class='line'>159</span> 	* @return {Rect} Rect 对象
+<span class='line'>160</span> 	*/</span><span class="WHIT"> 
+<span class='line'>161</span> 	</span><span class="NAME">boundingBox</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>162</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>163</span> 	* @description 注册节点定时回调函数
+<span class='line'>164</span> 	* @function 
+<span class='line'>165</span> 	* @param {Object} callFunc 回调函数
+<span class='line'>166</span> 	* @param {Number} delay 延迟时间
+<span class='line'>167</span> 	* @return {Number} scheduleId 回调标识
+<span class='line'>168</span> 	*/</span><span class="WHIT"> 
+<span class='line'>169</span> 	</span><span class="NAME">schedule</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">callFunc</span><span class="PUNC">,</span><span class="NAME">delay</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>170</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'>171</span> 	* @description 取消节点定时回调
+<span class='line'>172</span> 	* @function 
+<span class='line'>173</span> 	* @param {Number} scheduleId 回调标识
+<span class='line'>174</span> 	*/</span><span class="WHIT"> 
+<span class='line'>175</span> 	</span><span class="NAME">unschedule</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">scheduleId</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>176</span> </span><span class="WHIT">  </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>177</span> </span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>178</span> 
+<span class='line'>179</span> 
+<span class='line'>180</span> </span></pre></body></html>

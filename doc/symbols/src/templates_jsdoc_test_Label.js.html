@@ -1,0 +1,68 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">/**
+<span class='line'>  2</span>  * @class 指定字体样式创建文字
+<span class='line'>  3</span>  * @augments Node
+<span class='line'>  4</span>  * @param {String} label 需要创建的文字
+<span class='line'>  5</span>  * @param {String} fontName 字体名
+<span class='line'>  6</span>  * @param {Number} fontSize 字体大小
+<span class='line'>  7</span>  * @return {LabelTTF} 返回label
+<span class='line'>  8</span>  * @example var label = new LabelTTF(
+<span class='line'>  9</span>  *	      {
+<span class='line'> 10</span>  *					label:'test'
+<span class='line'> 11</span>  *					fontName:'Arail'
+<span class='line'> 12</span>  *					fontSize:10
+<span class='line'> 13</span>  *	      });
+<span class='line'> 14</span>  */</span><span class="WHIT">
+<span class='line'> 15</span> </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">LabelTTF</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Class.create</span><span class="PUNC">(</span><span class="NAME">Node</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 16</span> </span><span class="WHIT">  </span><span class="COMM">/** @lends LabelTTF# */</span><span class="WHIT">
+<span class='line'> 17</span> </span><span class="WHIT">  </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 18</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 19</span> 	* @description 设置颜色
+<span class='line'> 20</span> 	* @function 
+<span class='line'> 21</span> 	* @param {Number} r 红色
+<span class='line'> 22</span> 	* @param {Number} g 绿色
+<span class='line'> 23</span> 	* @param {Number} b 蓝色
+<span class='line'> 24</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 25</span> 	</span><span class="NAME">setColor</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">r</span><span class="PUNC">,</span><span class="NAME">g</span><span class="PUNC">,</span><span class="NAME">b</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 26</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 27</span> 	* @description 设置标签文字
+<span class='line'> 28</span> 	* @function 
+<span class='line'> 29</span> 	* @param {String} str 文字
+<span class='line'> 30</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 31</span> 	</span><span class="NAME">setString</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">str</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 32</span> </span><span class="WHIT">	</span><span class="COMM">/** 
+<span class='line'> 33</span> 	* @description 获取标签文字
+<span class='line'> 34</span> 	* @function 
+<span class='line'> 35</span> 	* @return {String} 文字 
+<span class='line'> 36</span> 	*/</span><span class="WHIT"> 
+<span class='line'> 37</span> 	</span><span class="NAME">getString</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 38</span> </span><span class="WHIT">  </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 39</span> </span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 40</span> 
+<span class='line'> 41</span> 
+<span class='line'> 42</span> </span><span class="COMM">/**
+<span class='line'> 43</span>  * @class 用fnt文件创建文字
+<span class='line'> 44</span>  * @augments Node
+<span class='line'> 45</span>  * @param {String} label 需要创建的文字
+<span class='line'> 46</span>  * @param {String} fntFile fnt文件路径
+<span class='line'> 47</span>  * @return {LabelTTF} 返回label
+<span class='line'> 48</span>  * @example var label = new LabelBMFont(
+<span class='line'> 49</span>  *						{
+<span class='line'> 50</span>  *							label:'test',
+<span class='line'> 51</span>  *							fntFile:'test.fnt'
+<span class='line'> 52</span>  *						});
+<span class='line'> 53</span>  */</span><span class="WHIT">
+<span class='line'> 54</span> </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">LabelBMFont</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Class.create</span><span class="PUNC">(</span><span class="NAME">Node</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 55</span> </span><span class="WHIT">  </span><span class="COMM">/** @lends LabelBMFont# */</span><span class="WHIT">
+<span class='line'> 56</span> </span><span class="WHIT">  </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 57</span> </span><span class="WHIT"> 
+<span class='line'> 58</span>   </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 59</span> </span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 60</span> 
+<span class='line'> 61</span> </span></pre></body></html>
